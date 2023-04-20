@@ -1,0 +1,15 @@
+.drop-btn-1{
+    
+    display: flex;
+    align-items: center;
+    border: 1px solid rgb(144,122,118);
+    border-radius: 15px;
+    padding: 8px;
+    width: 90%;
+}
+
+.drop-menu{
+    width: 90%;
+    background-color: white;
+    border: 1px solid rgb(205,124,94);
+}
