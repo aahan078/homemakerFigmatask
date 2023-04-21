@@ -11,7 +11,7 @@ export default function Register() {
             
               <h3 className='input-h3'>Register  <span>Your Self</span> </h3>
               <hr/>
-              <p>One step away to see the result</p>
+              <p className='input-p'>One step away to see the result</p>
 
               <div className='email--input '>
                 <p>Name</p>
@@ -34,12 +34,12 @@ export default function Register() {
 </div>
               </div>
 
-             <button className='input--btn-1 mt-5'>Confirm</button>
-             <h3 className='mt-2 text-center'>Sign into  <a href='login'><span>your account</span></a> </h3>
+             <button className='input--btn-1-r mt-5'>Confirm</button>
+             
           </div>
 
-          <div className='col-lg-6 col-sm-12 input-side-img'>
-<img src={register} alt='img' ></img>
+          <div className='container col-lg-6 col-sm-12 input-side-img-r'>
+<img src={register} alt='img'></img>
           </div>
         </div>
 </div>

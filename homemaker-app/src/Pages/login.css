@@ -8,10 +8,16 @@
     margin-top: 50px;
     color: rgb(151,130,126);
 }
+.email--input p{
+    font-weight: 400;
+font-size: 16px;
+line-height: 19px;
 
+color: #3A120A;
+}
 .email--input input{
-    border: 1px solid rgb(144,122,118);
-    border-radius: 15px;
+    border: 1px solid #3A120A;
+    border-radius: 50px;
     padding: 8px;
     width: 90%;
     
@@ -30,9 +36,13 @@
 }
 
 .input-h3{
-    font-weight: 700;
+
     color: rgb(58,18,10);
+    font-weight: 700;
+font-size: 30px;
+line-height: 45px;
 }
+
 
 .input-h3 span{
     color: rgb(205,124,94);

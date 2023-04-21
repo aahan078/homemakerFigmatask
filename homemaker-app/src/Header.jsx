@@ -7,8 +7,8 @@ import '../src/header.css'
 
 export default function Header() {
   return (
-    <div className="container-fluid">
-      <Navbar collapseOnSelect  expand="lg" bg="light"  variant="" className="nav">
+    <div className="">
+      <Navbar collapseOnSelect  expand="lg" bg="white"   variant="" className="nav">
         <Container>
           <Navbar.Brand href="/">
             <img src={logo} alt="logo"></img>
@@ -21,10 +21,10 @@ export default function Header() {
             </Nav>
             <Nav className="btns-nav">
               <Nav.Link href="#deets">
-                <button className="nav--btn-1">BILLING</button>
+                <button className="nav--btn-1">Billing</button>
               </Nav.Link>
               <Nav.Link eventKey={2} href="#memes">
-                <button className="btns-nav-2">UPGRADE TO PRO</button>
+                <button className="btns-nav-2">Upgrade to pro</button>
               </Nav.Link>
             </Nav>
           </Navbar.Collapse>
