@@ -13,19 +13,47 @@ const [work,workchange] = useState("");
 const navigate=useNavigate();
 
 const isValidate=()=>{
-  let isproceed=ture;
-  if(name==null)
+  let isproceed=true;
+  let errormessage = 'Please enter the value in '
+  if(name==null || name==""){
+isproceed=false;
+errormessage += 'Name '
+  }
+  if(email==null || email==""){
+isproceed=false;
+errormessage += 'E-mail '
+  }
+  if(password==null || password==""){
+isproceed=false;
+errormessage += 'Password '
+  }
+  if(work==null || work==""){
+isproceed=false;
+errormessage += 'Profession '
+  }
+  if(!isproceed){
+    toast.warning(errormessage)
+  }else{
+    if(/^[a -zA-Z0-9]+@[a-zA-Z0-9]+\.[A-Za-z]+$/.test(email)){
+
+    }else{
+      isproceed= false;
+      toast.warning('Please enter the valid e-mail')
+    }
+  }
   return isproceed
 }
 
   const handlesubmit=(e)=>{
-    if(isValidate()){
-
-    
     e.preventDefault();
     let regobj={
       name,email,password,work
     };
+    if(isValidate()){
+
+    
+    
+  
     // console.log(regobj);
 
     fetch('http://localhost:3001/user',{
