@@ -6,11 +6,12 @@ import Main from './Main';
 import '../src/App.css'
 import Login from './Pages/Login';
 import Register from './Pages/Register';
+import {ToastContainer} from 'react-toastify'
 
 export default function App() {
   return (
     <div className='app'>
-
+<ToastContainer></ToastContainer>
       <Header/>
       <Router>
         <Routes>
