@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "../Pages/register.css";
 import register from "../Images/register.png";
 import { toast } from "react-toastify";
+import { useNavigate } from "react-router-dom";
 
 export default function Register() {
 const [name,namechange] = useState("");
@@ -9,7 +10,18 @@ const [email,emailchange] = useState("");
 const [password,passwordchange] = useState("");
 const [work,workchange] = useState("");
 
+const navigate=useNavigate();
+
+const isValidate=()=>{
+  let isproceed=ture;
+  if(name==null)
+  return isproceed
+}
+
   const handlesubmit=(e)=>{
+    if(isValidate()){
+
+    
     e.preventDefault();
     let regobj={
       name,email,password,work
@@ -22,13 +34,15 @@ const [work,workchange] = useState("");
       body:JSON.stringify(regobj)
     }).then((res)=>{
 toast.success('Registered successfully')
+navigate('/login');
     }).catch((err)=>{
 toast.error('Failed:'+err.message);
     });
   }
+  }
   return (
     <div>
-      <div className="container" >
+      <div className="container">
         <div className="row gx-5 gy-2 p-5 ">
           <form className="col-lg-6 col-sm-12 input-login" onSubmit={handlesubmit}>
             <h3 className="input-h3">
@@ -39,7 +53,7 @@ toast.error('Failed:'+err.message);
 
             <div className="email--input "   >
               <p>Name</p>
-              <input value={name} onChange={e=>namechange(e.target.value)} type="text" placeholder="John" className="errmsg"></input>
+              <input  value={name} onChange={e=>namechange(e.target.value)} type="text" placeholder="John" className="errmsg"></input>
               <p>E-mail</p>
               <input value={email} onChange={e=>emailchange(e.target.value)} type="email" placeholder="example@example.com" className="errmsg"></input>
               <p>Password</p>

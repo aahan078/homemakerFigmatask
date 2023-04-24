@@ -11,7 +11,7 @@ import {ToastContainer} from 'react-toastify'
 export default function App() {
   return (
     <div className='app'>
-<ToastContainer></ToastContainer>
+<ToastContainer theme='colored'></ToastContainer>
       <Header/>
       <Router>
         <Routes>
