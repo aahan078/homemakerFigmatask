@@ -1,18 +1,32 @@
 {
   "user": [
     {
-      "name": "Aahan",
-      "email": "ahn@gmail.com",
-      "password": "123456",
+      "username": "ahan1",
+      "email": "ahn@yahoo.com",
+      "password": "ahn",
       "work": "developer",
-      "id": 1
+      "id": 3
     },
     {
-      "name": "john",
-      "email": "eg@gmail.com",
-      "password": "asdfghjkl",
-      "work": "frontend",
-      "id": 2
+      "username": "john",
+      "email": "j@yho.com",
+      "password": "john",
+      "work": "developer",
+      "id": 4
+    },
+    {
+      "username": "ahn2",
+      "email": "a@mail.com",
+      "password": "ahn2",
+      "work": "developer",
+      "id": 5
+    },
+    {
+      "username": "hari",
+      "email": "hari@email.com",
+      "password": "qwerty",
+      "work": "dev",
+      "id": 6
     }
   ]
 }

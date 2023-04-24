@@ -5,7 +5,7 @@ import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
 
 export default function Register() {
-const [name,namechange] = useState("");
+const [username,usernamechange] = useState("");
 const [email,emailchange] = useState("");
 const [password,passwordchange] = useState("");
 const [work,workchange] = useState("");
@@ -15,9 +15,9 @@ const navigate=useNavigate();
 const isValidate=()=>{
   let isproceed=true;
   let errormessage = 'Please enter the value in '
-  if(name==null || name==""){
+  if(username==null || username==""){
 isproceed=false;
-errormessage += 'Name '
+errormessage += 'Username '
   }
   if(email==null || email==""){
 isproceed=false;
@@ -47,14 +47,14 @@ errormessage += 'Profession '
   const handlesubmit=(e)=>{
     e.preventDefault();
     let regobj={
-      name,email,password,work
+      username,email,password,work
     };
     if(isValidate()){
 
     
     
   
-    // console.log(regobj);
+    console.log(regobj);
 
     fetch('http://localhost:3001/user',{
       method:'Post',
@@ -80,8 +80,8 @@ toast.error('Failed:'+err.message);
             <p className="input-p">One step away to see the result</p>
 
             <div className="email--input "   >
-              <p>Name</p>
-              <input  value={name} onChange={e=>namechange(e.target.value)} type="text" placeholder="John" className="errmsg"></input>
+              <p>Username</p>
+              <input  value={username} onChange={e=>usernamechange(e.target.value)} type="text" placeholder="John" className="errmsg"></input>
               <p>E-mail</p>
               <input value={email} onChange={e=>emailchange(e.target.value)} type="email" placeholder="example@example.com" className="errmsg"></input>
               <p>Password</p>
