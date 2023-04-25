@@ -8,6 +8,9 @@ import Login from './Pages/Login';
 import Register from './Pages/Register';
 import {ToastContainer} from 'react-toastify'
 import Generate from './Pages/Generate';
+import Final from './Pages/Final';
+import UploadPage from './Pages/UploadPage';
+import ImageDisplayPage from './Pages/ImageDisplayPage';
 
 export default function App() {
   return (
@@ -20,6 +23,9 @@ export default function App() {
           <Route exact path="/login" element={<Login/>}></Route>
           <Route exact path="/register" element={<Register/>}></Route>
           <Route exact path="/generate" element={<Generate/>}></Route>
+          <Route exact path="/final" element={<Final/>}></Route>
+          <Route exact path="/upload" element={<UploadPage/>}></Route>
+          <Route exact path="/image" element={<ImageDisplayPage/>}></Route>
 
           </Routes>
       </Router>

@@ -60,6 +60,7 @@ export default function Register() {
         body: JSON.stringify(regobj),
       })
         .then((res) => {
+          
           toast.success("Registered successfully");
           navigate("/login");
         })

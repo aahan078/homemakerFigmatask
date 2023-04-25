@@ -1,20 +1,60 @@
-import React from 'react'
-import '../Pages/generate.css'
-import vector from '../Images/Vector.png'
-import grp from '../Images/grp.png'
+import React, { useState } from "react";
+import axios from "axios";
+import { useNavigate } from 'react-router-dom';
+import "../Pages/generate.css";
+import vector from "../Images/Vector.png";
+import grp from "../Images/grp.png";
 
 export default function Generate() {
+
+    const [image, setImage] = useState(null);
+    const navigate = useNavigate();
+
+    const handleImageUpload = async (event) => {
+        const file = event.target.files[0];
+        const formData = new FormData();
+        formData.append("file", file);
+        formData.append("upload_preset", "zdbqreqo"); // Replace with your Cloudinary upload preset
+    
+        try {
+          const response = await axios.post(
+            "https://api.cloudinary.com/v1_1/dj7haln6x/image/upload", // Replace with your Cloudinary cloud name
+            formData
+          );
+    
+          // Get the uploaded image URL from the response
+          const imageURL = response.data.secure_url;
+    
+          // Set the uploaded image URL to the state
+          setImage(imageURL);
+    
+        } catch (error) {
+          console.error("Error uploading image to Cloudinary: ", error);
+        }
+      };
+    
+      // Function to navigate to the Final page with the uploaded image URL
+      const handleNext = () => {
+        navigate({
+          pathname: "/final",
+          state: { imageURL: image }
+        });
+      };
+    
+
   return (
     <div>
-        <div className='container'>
-            <div className='row gy-2'>
-                <div className='col-lg-6 col-sm-12 p-5'>
-                    <div className='gen-txt-h3 mt-5'>
-                        <h2>Generate your <span>Dream house</span> </h2>
-                    </div>
-                    <div className='select-rooms mt-3 '>
-                        <p>Choose your room theme</p>
-                        <div className="dropdown">
+      <div className="container">
+        <div className="row gy-2">
+          <div className="col-lg-6 col-sm-12 p-5">
+            <div className="gen-txt-h3 mt-5">
+              <h2>
+                Generate your <span>Dream house</span>{" "}
+              </h2>
+            </div>
+            <div className="select-rooms mt-3 ">
+              <p>Choose your room theme</p>
+              <div className="dropdown">
                 <button
                   className="btn  dropdown-toggle drop-btn-1"
                   type="button"
@@ -47,7 +87,7 @@ export default function Generate() {
                 </ul>
               </div>
 
-              <p className='mt-3'>Choose your room type</p>
+              <p className="mt-3">Choose your room type</p>
 
               <div className="dropdown">
                 <button
@@ -61,45 +101,45 @@ export default function Generate() {
                 <ul className="dropdown-menu drop-menu">
                   <li>
                     <a className="dropdown-item" href="#">
-                    Salon 
+                      Salon
                     </a>
                   </li>
                   <li>
                     <a className="dropdown-item" href="#">
-                    Bureau
+                      Bureau
                     </a>
                   </li>
                   <li>
                     <a className="dropdown-item" href="#">
-                    Chambre
+                      Chambre
                     </a>
                   </li>
                   <li>
                     <a className="dropdown-item" href="#">
-                    Salle de jeux
+                      Salle de jeux
                     </a>
                   </li>
                 </ul>
               </div>
-            
-              <div className='image-uploader '>
-              <p className='mt-3'>Upload an image</p>
-                <div className='uploader-box mt-3 p-5'>
-<img src={vector} alt='img'></img>
-<p className='mt-5'>Drag and drop an image or...</p>
-<button className='upload-btn mt-3'>Upload an image</button>
 
+              <div className="image-uploader ">
+                <p className="mt-3">Upload an image</p>
+                <div className="uploader-box mt-3 p-5">
+                  <img src={vector} alt="img"></img>
+                  <p className="mt-5">Drag and drop an image or...</p>
+                  <input type="file" onChange={handleImageUpload} />
+      {image && <img src={image} alt="Uploaded" />}
+                  <button  onClick={handleNext} className="upload-btn mt-3">Upload an image</button>
                 </div>
               </div>
-
-                    </div>
-                </div>
-
-                <div className='col-lg-6 col-sm-12'>
-<img className='grp-img-gen' src={grp} alt='img'></img>
-                </div>
             </div>
+          </div>
+
+          <div className="col-lg-6 col-sm-12">
+            <img className="grp-img-gen" src={grp} alt="img"></img>
+          </div>
         </div>
+      </div>
     </div>
-  )
+  );
 }

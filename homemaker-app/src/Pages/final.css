@@ -1,0 +1,24 @@
+.txt-final-h3{
+    font-weight: 700;
+font-size: 30px;
+line-height: 45px;
+width: 162px;
+display: flex;
+margin: auto;
+
+border-bottom: 2px solid rgba(58, 18, 10, 1);
+color: #3A120A;
+height: 45px;
+
+
+}
+
+.txt-final-h3 span{
+    color: rgba(205, 124, 94, 1);
+}
+
+.final-img-box{
+    border: 2px solid red;
+    width: 50%;
+    margin: auto;
+}

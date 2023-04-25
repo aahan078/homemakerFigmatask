@@ -41,6 +41,20 @@
       "password": "arsh",
       "work": "frontend",
       "id": 8
+    },
+    {
+      "username": "ahan solanki",
+      "email": "a@gmail.com",
+      "password": "123456",
+      "work": "developer",
+      "id": 9
+    },
+    {
+      "username": "cody",
+      "email": "cd@gmail.com",
+      "password": "cody",
+      "work": "developer",
+      "id": 10
     }
   ]
 }
