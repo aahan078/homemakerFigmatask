@@ -27,6 +27,20 @@
       "password": "qwerty",
       "work": "dev",
       "id": 6
+    },
+    {
+      "username": "jack",
+      "email": "jack@yahoo.com",
+      "password": "jack",
+      "work": "developer",
+      "id": 7
+    },
+    {
+      "username": "arsh",
+      "email": "arsh@gmail.com",
+      "password": "arsh",
+      "work": "frontend",
+      "id": 8
     }
   ]
 }

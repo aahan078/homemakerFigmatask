@@ -7,6 +7,7 @@ import '../src/App.css'
 import Login from './Pages/Login';
 import Register from './Pages/Register';
 import {ToastContainer} from 'react-toastify'
+import Generate from './Pages/Generate';
 
 export default function App() {
   return (
@@ -18,6 +19,8 @@ export default function App() {
           <Route exact path="/" element={<Main/>}></Route>
           <Route exact path="/login" element={<Login/>}></Route>
           <Route exact path="/register" element={<Register/>}></Route>
+          <Route exact path="/generate" element={<Generate/>}></Route>
+
           </Routes>
       </Router>
     </div>

@@ -1,0 +1,76 @@
+.grp-img-gen{
+    width: 100%;
+}
+
+.gen-txt-h3{
+    font-weight: 600;
+font-size: 40px;
+line-height: 60px;
+/* text-align: center; */
+/* width: 450px; */
+color:#3A120A;
+}
+
+.gen-txt-h3 span{
+    color: 
+    rgba(205, 124, 94, 1);
+}
+
+.select-rooms p{
+    font-weight: 500;
+font-size: 18px;
+line-height: 22px;
+/* identical to box height */
+
+
+color: #3A120A;
+}
+
+.drop-btn-1{
+    font-weight: 400;
+font-size: 18px;
+line-height: 22px;
+/* identical to box height */
+
+
+color: #3A120A;
+}
+
+.uploader-box{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    border: 1px dashed #3A120A;
+border-radius: 30px;
+text-align: center;
+}
+
+.uploader-box img{
+    width: 20%;
+    display: flex;
+    margin: auto;
+    color: 
+    rgba(58, 18, 10, 1);
+}
+
+.upload-btn{
+    display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 13px 80px;
+gap: 10px;
+border: transparent;
+width: 336px;
+height: 56px;
+margin: auto;
+background: #CD7C5E;
+border-radius: 50px;
+font-weight: 700;
+font-size: 20px;
+line-height: 30px;
+
+
+
+color: #FFFFFF;
+}

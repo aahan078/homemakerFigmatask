@@ -5,7 +5,7 @@
 .email--input{
     border: 0px solid green;
     padding: 5px;
-    margin-top: 50px;
+    /* margin-top: 50px; */
     color: rgb(151,130,126);
 }
 .email--input p{
