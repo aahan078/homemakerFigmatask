@@ -55,6 +55,13 @@
       "password": "cody",
       "work": "developer",
       "id": 10
+    },
+    {
+      "username": "peter",
+      "email": "p@email.com",
+      "password": "peter",
+      "work": "developer",
+      "id": 11
     }
   ]
 }
