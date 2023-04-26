@@ -62,6 +62,27 @@
       "password": "peter",
       "work": "developer",
       "id": 11
+    },
+    {
+      "username": "ark",
+      "email": "e@gmail.com",
+      "password": "ark",
+      "work": "bde",
+      "id": 12
+    },
+    {
+      "username": "test",
+      "email": "test@gmail.com",
+      "password": "test",
+      "work": "test",
+      "id": 13
+    },
+    {
+      "username": "honey",
+      "email": "honey@gmail.com",
+      "password": "honey",
+      "work": "sales",
+      "id": 14
     }
   ]
 }

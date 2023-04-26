@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 // import axios from "axios";
-import { useNavigate } from "react-router-dom";
+import {useNavigate } from "react-router-dom";
 import "../Pages/generate.css";
 import vector from "../Images/Vector.png";
 import grp from "../Images/grp.png";
@@ -8,36 +8,8 @@ import grp from "../Images/grp.png";
 export default function Generate() {
   const [image, setImage] = useState(null);
   const navigate = useNavigate();
+console.log("imageUrldatas",image)
 
-//   const handleImageUpload = async (event) => {
-//     const file = event.target.files[0];
-//     const formData = new FormData();
-//     formData.append("file", file);
-//     formData.append("upload_preset", "zdbqreqo"); // Replace with your Cloudinary upload preset
-// formData.append("cloud_name","dj7haln6x");
-//     try {
-//       const response = await axios.post(
-//         "https://api.cloudinary.com/v1_1/dj7haln6x/image/upload", // Replace with your Cloudinary cloud name
-//         formData
-//       );
-
-//       // Get the uploaded image URL from the response
-//       const imageURL = response.data.secure_url;
-
-//       // Set the uploaded image URL to the state
-//       setImage(imageURL);
-//     } catch (error) {
-//       console.error("Error uploading image to Cloudinary: ", error);
-//     }
-//   };
-
-//   // Function to navigate to the Final page with the uploaded image URL
-//   const handleNext = () => {
-//     navigate({
-//       pathname: "/final",
-//       state: { imageURL: image },
-//     });
-//   };
 
 const handleNext =()=>{
   const data = new FormData()
@@ -53,11 +25,55 @@ const handleNext =()=>{
   }).then((res)=>
     res.json()
   ).then((data)=>{
+
+    const imageURL = data.secure_url;
+    console.log("imageUrl",imageURL)
+    setImage(imageURL);
+    navigate("/final",
+    {
+      state:{imagedata:imageURL}
+    });
     console.log(data);
   }).catch((err)=>{
     console.log(err)
   })
+
+ 
+ 
 }
+
+// const handleImageUpload = async (event) => {
+//   const file = ( event.target.files[0]);
+//   const formData = new FormData();
+//   formData.append("file", file);
+//   formData.append("upload_preset", "zdbqreqo");
+//   formData.append("cloud_name","dj7haln6x")
+
+//   try {
+//     const response = await fetch(
+//       "https://api.cloudinary.com/v1_1/dj7haln6x/image/upload", 
+//       {
+//         method: "POST",
+//         body: formData
+//       }
+//     );
+// console.log(response);
+//     //  uploaded image URL from the response
+//     const data = await response.json();
+//     const imageURL = data.url;
+
+//     // Set the uploaded image URL to the state
+//     setImage(imageURL);
+
+//   } catch (error) {
+//     console.error("Error uploading image to Cloudinary: ", error);
+//   }
+// };
+
+// // Function to navigate to the Final page with the uploaded image URL
+// const handleNext = () => {
+//   navigate(`/final/${encodeURIComponent(image)}`);
+// };
 
   return (
     <div>
@@ -142,14 +158,17 @@ const handleNext =()=>{
               <div className="image-uploader ">
                 <p className="mt-3">Upload an image</p>
                 <div className="uploader-box mt-3 p-5">
-                  <img src={vector} alt="img"></img>
+               
+                  <img className="vector-img" src={vector} alt="img"></img>
                   <p className="mt-5">Drag and drop an image or...</p>
                   {/* <input type="file" onChange={handleImageUpload} /> */}
                   {/* {image && <img src={image} alt="Uploaded" />} */}
-                  <input type="file" onChange={(e)=>setImage(e.target.files[0])} ></input>
+                  <input className="input-gen-1" type="file" onChange={(e)=>setImage(e.target.files[0])} ></input>
+                   
                   <button onClick={handleNext} className="upload-btn mt-3">
                     Upload an image
                   </button>
+                  
                 </div>
               </div>
             </div>

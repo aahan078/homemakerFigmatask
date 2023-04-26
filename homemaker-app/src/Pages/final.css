@@ -18,7 +18,33 @@ height: 45px;
 }
 
 .final-img-box{
-    border: 2px solid red;
+    border: 0px solid red;
     width: 50%;
     margin: auto;
+    padding: 1rem;
+}
+
+.final-img-box img{
+    width: 100%;
+    border-radius: 20px;
+
+}
+
+.final-btn-1{
+    display: flex;
+    margin: auto;
+border: transparent;
+justify-content: center;
+align-items: center;
+padding: 13px 82.5px;
+gap: 10px;
+background: #CD7C5E;
+border-radius: 50px;
+font-weight: 700;
+font-size: 20px;
+line-height: 30px;
+
+
+
+color: #FFFFFF;
 }

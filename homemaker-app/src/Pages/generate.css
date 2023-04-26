@@ -75,12 +75,28 @@ line-height: 30px;
 color: #FFFFFF;
 }
 
+.input-gen-1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    margin: auto;
+    border: transparent;
+  
+   
+    /* background: #CD7C5E; */
+/* border-radius: 50px; */
+}
 
 @media only screen and (max-width:600px){
 .upload-btn{
     width: 100%;
     font-size: 15px;
     line-height: 15px;
+}
+.input-gen-1{
+    width: 100%;
+    
 }
 }
 @media only screen and (max-width:390px){
@@ -89,5 +105,9 @@ color: #FFFFFF;
     font-size: 15px;
     line-height: 15px;
     margin-left: -22px;
+}
+.input-gen-1{
+    width: 100%;
+
 }
 }
