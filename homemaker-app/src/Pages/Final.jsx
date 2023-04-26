@@ -20,7 +20,7 @@ export default function Final() {
        
         </div>
 
-        <button className='final-btn-1  mt-5'>Next</button>
+       <a href='/payement'><button className='final-btn-1  mt-5'>Next</button></a> 
     </div>
   )
 }

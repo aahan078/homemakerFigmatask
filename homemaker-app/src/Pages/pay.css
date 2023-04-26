@@ -1,0 +1,20 @@
+.pay-txt-p{
+    font-weight: 400;
+font-size: 16px;
+line-height: 19px;
+
+color: #A1543D;
+}
+
+.pay-sub-1{
+    border: 1px solid #3A120A;
+border-radius: 20px;
+height: 100px;
+display: flex;
+justify-content: space-around;
+}
+
+.mini-sub-1{
+    border: 1px solid red;
+width: 50%;
+}
