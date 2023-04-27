@@ -2,6 +2,7 @@ import React from 'react'
 // import { useParams } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 import { useNavigate } from 'react-router-dom';
+import Header from '../Header';
 import '../Pages/final.css'
 
 export default function Final() {
@@ -14,6 +15,8 @@ navigate('/payement')
    
     // const imageURL = location.state?.imageURL;
   return (
+    <div>
+      <Header/>
     <div className='container'>
 
         <h3 className='text-center mt-5 txt-final-h3'>Your<span>Work</span></h3>
@@ -24,6 +27,8 @@ navigate('/payement')
         </div>
 
        <button onClick={gotopayment} className='final-btn-1  mt-5'>Next</button>
+    </div>
+
     </div>
   )
 }

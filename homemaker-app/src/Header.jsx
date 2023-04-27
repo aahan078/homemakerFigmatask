@@ -3,11 +3,15 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import logo from '../src/Images/logo.png'
-// import {useNavigate } from "react-router-dom";
+import {useNavigate } from "react-router-dom";
 import '../src/header.css'
 
 export default function Header() {
-  
+
+  const navigate = useNavigate();
+  const gotohome =()=>{
+navigate('/');
+  }
 
 
   return (
@@ -15,7 +19,7 @@ export default function Header() {
       <Navbar collapseOnSelect  expand="lg" bg="white"   variant="" className="nav">
         <Container>
           <Navbar.Brand >
-            <img  src={logo} alt="logo"></img>
+            <img className="logo-img-1" onClick={gotohome} src={logo} alt="logo"></img>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">

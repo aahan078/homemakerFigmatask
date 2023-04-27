@@ -8,6 +8,7 @@ import vector from "../Images/Vector.png";
 import grp from "../Images/grp.png";
 import Swal from 'sweetalert2'
 import { toast } from "react-toastify";
+import Header from "../Header";
 
 
 export default function Generate() {
@@ -94,6 +95,7 @@ const handleNext =()=>{
 
   return (
     <div>
+       <Header/>
       <div className="container">
         <div className="row gy-2">
           <div className="col-lg-6 col-sm-12 p-5">

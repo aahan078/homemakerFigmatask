@@ -44,3 +44,6 @@ font-size: 20px;
     z-index: 0;
 }
 
+.logo-img-1:hover{
+cursor: pointer;
+}

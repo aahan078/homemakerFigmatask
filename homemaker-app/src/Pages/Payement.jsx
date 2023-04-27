@@ -3,11 +3,13 @@ import React , { useState } from 'react'
 import '../Pages/pay.css'
 
 import sofa from '../Images/Frame.png'
+import Header from '../Header'
 
 export default function Payement() {
 
   return (
     <div>
+         <Header/>
         <div className='container'>
             <div className='row '>
                 <div className='col-lg-6 col-sm-12 main-pay-box'>

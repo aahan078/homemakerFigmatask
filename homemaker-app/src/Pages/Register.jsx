@@ -3,6 +3,7 @@ import "../Pages/register.css";
 import register from "../Images/register.png";
 import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
+import Header from "../Header";
 
 export default function Register() {
   const [username, usernamechange] = useState("");
@@ -71,6 +72,7 @@ export default function Register() {
   };
   return (
     <div>
+        <Header/>
       <div className="container">
         <div className="row ">
           <form

@@ -15,9 +15,11 @@ export default function App() {
   return (
     <div className='app'>
 <ToastContainer theme='colored'></ToastContainer>
-      <Header/>
+      
       <Router>
         <Routes>
+        {/* <Route exact path="/" element={<Header/>}></Route> */}
+         
           <Route exact path="/" element={<Main/>}></Route>
           <Route exact path="/login" element={<Login/>}></Route>
           <Route exact path="/register" element={<Register/>}></Route>
