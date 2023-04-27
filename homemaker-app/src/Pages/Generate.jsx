@@ -1,14 +1,21 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 // import axios from "axios";
 import {useNavigate } from "react-router-dom";
+// import Backdrop from '@mui/material/Backdrop';
+// import CircularProgress from '@mui/material/CircularProgress';
 import "../Pages/generate.css";
 import vector from "../Images/Vector.png";
 import grp from "../Images/grp.png";
+import Swal from 'sweetalert2'
+// import withReactContent from 'sweetalert2-react-content'
 
 export default function Generate() {
   const [image, setImage] = useState(null);
+  // const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
 console.log("imageUrldatas",image)
+
+
 
 
 const handleNext =()=>{
@@ -17,7 +24,7 @@ const handleNext =()=>{
   data.append("upload_preset", "zdbqreqo");
   data.append("cloud_name","dj7haln6x");
 
-  fetch("https://api.cloudinary.com/v1_1/dj7haln6x/image/upload",{
+ fetch("https://api.cloudinary.com/v1_1/dj7haln6x/image/upload",{
     
       method:"post",
       body:data
@@ -29,10 +36,17 @@ const handleNext =()=>{
     const imageURL = data.secure_url;
     console.log("imageUrl",imageURL)
     setImage(imageURL);
+    if(image){
+      // setLoading(true);
     navigate("/final",
     {
       state:{imagedata:imageURL}
-    });
+    })
+  }else{Swal.fire(
+    'No Image !',
+    'Upload an Image first',
+    'question'
+  )}
     console.log(data);
   }).catch((err)=>{
     console.log(err)
@@ -164,13 +178,19 @@ const handleNext =()=>{
                   {/* <input type="file" onChange={handleImageUpload} /> */}
                   {/* {image && <img src={image} alt="Uploaded" />} */}
                   <input className="input-gen-1" type="file" onChange={(e)=>setImage(e.target.files[0])} ></input>
-                   
+                
                   <button onClick={handleNext} className="upload-btn mt-3">
-                    Upload an image
+                  {/* {loading ? (
+          <div className="loader"></div>
+        ) : (
+          "Upload an image"
+        )} */}
+        Upload an image
                   </button>
-                  
+      
                 </div>
               </div>
+              
             </div>
           </div>
 

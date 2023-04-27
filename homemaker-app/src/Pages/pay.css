@@ -11,10 +11,69 @@ color: #A1543D;
 border-radius: 20px;
 height: 100px;
 display: flex;
-justify-content: space-around;
+justify-content: space-between;
+padding: 12px;
+align-items: center;
+
 }
 
 .mini-sub-1{
-    border: 1px solid red;
-width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border: 0px solid red;
+width: 40%;
+line-height: 27px;
 }
+.mini-sub-1 p{
+    font-weight: 500;
+font-size: 16px;
+
+
+color: #3A120A
+}
+.mini-sub-1 span{
+    font-size: 22px;
+line-height: 27px;
+/* identical to box height */
+
+
+color: #3A120A;
+}
+
+.money-box{
+    border: 0px solid blue;
+    font-weight: 700;
+font-size: 22px;
+line-height: 27px;
+/* identical to box height */
+
+
+color: #3A120A
+}
+
+.pay-sub-1:hover{
+    cursor: pointer;
+    transition: 0.5s;
+    background: #F6D1B9;
+    
+}
+
+.main-pay-box{
+    background: rgba(246, 209, 185, 0.22);
+}
+
+.form-txt-h3{
+    font-weight: 600;
+font-size: 40px;
+line-height: 60px;
+/* identical to box height */
+
+
+color: #3A120A;
+}
+
+.form-txt-h3 span{
+    color: rgba(205, 124, 94, 1);
+}
+
