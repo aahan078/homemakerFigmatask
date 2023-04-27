@@ -77,3 +77,87 @@ color: #3A120A;
     color: rgba(205, 124, 94, 1);
 }
 
+.card-paypal-box{
+    border: 0px solid red;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.credit-card{
+    display: flex;
+justify-content: space-evenly;
+padding: 0px;
+align-items: center;
+border: 1px solid #3A120A;
+border-radius: 50px;
+width: 40%;
+
+}
+
+.date-cvv{
+    display: flex;
+    justify-content: space-between;
+    padding: 0px;
+    align-items: center;
+    border: 0px solid red;
+}
+
+ .expire-txt{
+    border: 0px solid green;
+    width: 40%;
+    padding: 5px;
+}
+
+.expire-txt input{
+    width: 100%;
+}
+
+.sub-total{
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+}
+
+.form-main-box input{
+    border: 1px solid #3A120A;
+border-radius: 50px;
+height: 50px;
+padding: 15px;
+}
+
+.email-input-pay{
+    width: 100%;
+}
+
+.form-main-box{
+    font-weight: 500;
+font-size: 18px;
+line-height: 22px;
+/* identical to box height */
+
+
+color: #3A120A
+}
+
+.payement-box-1>img{
+    width: 100%;
+}
+
+
+.pay-btn-1{
+    display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 13px 162.5px;
+gap: 10px;
+    background: #CD7C5E;
+border-radius: 50px;
+    height: 56px;
+    width: 100%;
+    border: transparent;
+    color: #FFFFFF;
+    font-weight: 700;
+font-size: 20px;
+}

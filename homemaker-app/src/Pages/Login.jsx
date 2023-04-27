@@ -39,6 +39,10 @@ export default function Login() {
     }
   };
 
+  const gotoregister=()=>{
+    usenavigate("/register")
+  }
+
 
   // const Proceedlogin = (e) => {
   //   e.preventDefault();
@@ -113,11 +117,11 @@ export default function Login() {
             <button type="submit" className="input--btn-1 mt-5">
               To log in
             </button>
-            <h3 className="mt-2 text-center">
+            <h3 onClick={gotoregister} className="mt-2 text-center">
               No account?{" "}
-              <a href="register">
-                <span>Register</span>
-              </a>{" "}
+              
+                <span className="reg-span">Register</span>
+              
             </h3>
           </form>
 

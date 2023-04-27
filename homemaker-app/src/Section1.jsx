@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import img1 from "../src/Images/img1.png";
 import img2 from "../src/Images/aiImage.png";
 import lines from "../src/Images/lines2.png";
@@ -8,6 +9,10 @@ import newimg from "../src/Images/generated.png";
 import "../src/section1.css";
 
 export default function Section1() {
+  const navigate = useNavigate();
+  const gotologin=()=>{
+navigate('/login')
+  }
   return (
     <div>
       <div className="container">
@@ -36,8 +41,8 @@ export default function Section1() {
           </p>
         </div>
         <div className="btn-2 mt-5 text-center">
-          <a href="login">
-            <button>Generate your dream house</button>
+          <a >
+            <button onClick={gotologin}>Generate your dream house</button>
           </a>
         </div>
         <div className="row text-center mt-5 gx-5 gy-2">

@@ -83,6 +83,20 @@
       "password": "honey",
       "work": "sales",
       "id": 14
+    },
+    {
+      "username": "dhiraj",
+      "email": "d@gmail.com",
+      "password": "dhiraj",
+      "work": "frontend",
+      "id": 15
+    },
+    {
+      "username": "sri",
+      "email": "s@email.com",
+      "password": "sri",
+      "work": "frontend",
+      "id": 16
     }
   ]
 }

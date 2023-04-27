@@ -8,7 +8,7 @@ export default function Payement() {
 
   return (
     <div>
-        <div>
+        <div className='container'>
             <div className='row '>
                 <div className='col-lg-6 col-sm-12 main-pay-box'>
                     <div className='payement-box-1 p-5'>
@@ -56,8 +56,48 @@ export default function Payement() {
 <div className='form-main-box p-5'>
     <h3 className='form-txt-h3'>Payment <span>Details</span></h3>
 
- 
+ <div className='card-paypal-box'>
+    <div className='credit-card'>
+        <p className='mt-3'>Credit Card</p>
+        <input type='radio'></input>
+    </div>
+    <div className='credit-card'>
+        <p className='mt-3'>PayPal</p>
+        <input type='radio'></input>
+    </div>
+ </div>
+<p className='p-txt-pay mt-2'>Email</p>
+<input className='email-input-pay' required type='email'></input>
+<p className='p-txt-pay mt-2'>Credit Card Number</p>
+<input className='email-input-pay' required type='text' placeholder='xxxx xxxx xxxx xxxx'></input>
 
+<div className='date-cvv mt-2'>
+   <div className='expire-txt'>
+<p>Expiry Date</p>
+   <input type='text' placeholder='mm/yy'></input>
+   </div>
+   <div className='expire-txt'>
+<p>CVV</p>
+   <input type='text' placeholder='CVV'></input>
+   </div>
+
+
+</div>
+<div className='sub-total mt-2'>
+    <p>Subtotal</p>
+    <p>$49</p>
+</div>
+<div className='sub-total mt-2'>
+    <p>Platform Fee</p>
+    <p>$2</p>
+</div>
+<hr/>
+<div className='sub-total mt-2'>
+    <p>Total Amount</p>
+    <p>$52</p>
+</div>
+
+<button className='pay-btn-1 mt-2'>Pay $52</button>
 </div>
                 </div>
             </div>

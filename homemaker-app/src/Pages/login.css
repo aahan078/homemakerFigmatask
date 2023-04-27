@@ -72,3 +72,7 @@ line-height: 45px;
 .input--btn-1+h3 a{
     text-decoration: none;
 }
+
+.reg-span:hover{
+    cursor: pointer;
+}

@@ -1,12 +1,15 @@
 import React from 'react'
 // import { useParams } from "react-router-dom";
 import { useLocation } from "react-router-dom";
+import { useNavigate } from 'react-router-dom';
 import '../Pages/final.css'
 
 export default function Final() {
   const location = useLocation();
-
-  
+const navigate=useNavigate();
+  const gotopayment=()=>{
+navigate('/payement')
+  }
    
    
     // const imageURL = location.state?.imageURL;
@@ -20,7 +23,7 @@ export default function Final() {
        
         </div>
 
-       <a href='/payement'><button className='final-btn-1  mt-5'>Next</button></a> 
+       <button onClick={gotopayment} className='final-btn-1  mt-5'>Next</button>
     </div>
   )
 }

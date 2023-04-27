@@ -7,7 +7,8 @@ import "../Pages/generate.css";
 import vector from "../Images/Vector.png";
 import grp from "../Images/grp.png";
 import Swal from 'sweetalert2'
-// import withReactContent from 'sweetalert2-react-content'
+import { toast } from "react-toastify";
+
 
 export default function Generate() {
   const [image, setImage] = useState(null);
@@ -38,17 +39,19 @@ const handleNext =()=>{
     setImage(imageURL);
     if(image){
       // setLoading(true);
+      toast.success("Image uploaded")
     navigate("/final",
     {
       state:{imagedata:imageURL}
     })
   }else{Swal.fire(
-    'No Image !',
-    'Upload an Image first',
-    'question'
+    'No Image?', 
+    'Select an Image first',
+    'warning'
   )}
     console.log(data);
   }).catch((err)=>{
+    toast.error('Upload Failed')
     console.log(err)
   })
 
