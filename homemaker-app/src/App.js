@@ -10,6 +10,8 @@ import {ToastContainer} from 'react-toastify'
 import Generate from './Pages/Generate';
 import Final from './Pages/Final';
 import Payement from './Pages/Payement';
+import Newsweb from './Pages/Newsweb';
+import Newshome from './Pages/Newshome';
 
 export default function App() {
   return (
@@ -28,6 +30,9 @@ export default function App() {
           
           
           <Route exact path="/payement" element={<Payement/>}></Route>
+          <Route exact path="/newsapp" element={<Newsweb/>}></Route>
+          <Route exact path="/newshome" element={<Newshome/>}></Route>
+
 
           </Routes>
       </Router>
