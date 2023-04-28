@@ -4,6 +4,7 @@ import React, { useEffect, useState } from 'react'
 
 import  axios  from 'axios';
 import { Link } from 'react-router-dom';
+import '../Pages/fetchnews.css'
 
 const Fetchnews = () => {
     const [Data,setData] =useState("");
@@ -15,21 +16,23 @@ const Fetchnews = () => {
    },[]);
   return (
     <div className='container my-4'>
-        <h3>Top Headlines</h3>
-        <div className='container d-flex justify-content-center align-items-center flex-column my-3'>{Data ? Data.map((item,index)=>(
+        <h1 className='text-center' > <u>Top Headlines</u> </h1>
+        <div className='container d-flex justify-content-center align-items-center flex-column my-3 main-news-box' >{Data ? Data.map((item,index)=>(
             <>
-            <div className='container my-3 ' style={{width:"500px"}}>
-                <h5  >{item.title}</h5>
+            <div className='container mt-5 p-5 newsdata-box' style={{width:"100%",
+        
+        }}>
+                <h5>{item.title}</h5>
                
-                <img src={item.urlToImage} alt='img' className='img-fluid'
+                <img src={item.urlToImage} alt='img' className='img-fluid mt-3'
                 style={{width:"100%",
-                height:"400px",
+                height:"auto",
                 objectFit:"cover"
             
             }}
                 />
 
-<p>{item.content}</p>
+<p className='mt-3' >{item.content}</p>
 <Link to={item.url} target='blank'>View More</Link>
             </div>
             </>
