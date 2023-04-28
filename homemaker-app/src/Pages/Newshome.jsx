@@ -1,13 +1,14 @@
 import React from 'react'
-import Newsweb from './Newsweb'
+import Heronews from './Heronews'
+import Fetchnews from './Fetchnews'
 
-export default function Newshome() {
+const Newshome = () => {
   return (
     <div>
-        <Newsweb/>
-        Newshome
-
-
+        <Heronews/>
+        <Fetchnews/>
     </div>
   )
 }
+
+export default Newshome

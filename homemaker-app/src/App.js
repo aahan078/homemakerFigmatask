@@ -1,6 +1,6 @@
 import React from 'react'
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Header from './Header'
+
 import Main from './Main';
 
 import '../src/App.css'
@@ -10,8 +10,8 @@ import {ToastContainer} from 'react-toastify'
 import Generate from './Pages/Generate';
 import Final from './Pages/Final';
 import Payement from './Pages/Payement';
-import Newsweb from './Pages/Newsweb';
-import Newshome from './Pages/Newshome';
+import Newsapp from './Pages/Newsapp';
+import Catagories from './Pages/Catagories';
 
 export default function App() {
   return (
@@ -30,8 +30,17 @@ export default function App() {
           
           
           <Route exact path="/payement" element={<Payement/>}></Route>
-          <Route exact path="/newsapp" element={<Newsweb/>}></Route>
-          <Route exact path="/newshome" element={<Newshome/>}></Route>
+          <Route exact path="/newshome" element={<Newsapp/>}></Route>
+          <Route  path="/general" element={<Catagories cat="general" />}></Route>
+          <Route  path="/business" element={<Catagories cat="business" />}></Route>
+          <Route  path="/entertainment" element={<Catagories cat="entertainment" />}></Route>
+          <Route  path="/health" element={<Catagories cat="health" />}></Route>
+          <Route  path="/science" element={<Catagories cat="science" />}></Route>
+          <Route  path="/technology" element={<Catagories cat="technology" />}></Route>
+          <Route  path="/sports" element={<Catagories cat="sports" />}></Route>
+          
+          
+          
 
 
           </Routes>
