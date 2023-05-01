@@ -11,7 +11,7 @@ import Generate from './Pages/Generate';
 import Final from './Pages/Final';
 import Payement from './Pages/Payement';
 import Newsapp from './Pages/Newsapp';
-import Catagories from './Pages/Catagories';
+import Fetchnews from './Pages/Fetchnews';
 
 export default function App() {
   return (
@@ -31,13 +31,13 @@ export default function App() {
           
           <Route exact path="/payement" element={<Payement/>}></Route>
           <Route exact path="/newshome" element={<Newsapp/>}></Route>
-          <Route  path="/general" element={<Catagories cat="general" />}></Route>
-          <Route  path="/business" element={<Catagories cat="business" />}></Route>
-          <Route  path="/entertainment" element={<Catagories cat="entertainment" />}></Route>
-          <Route  path="/health" element={<Catagories cat="health" />}></Route>
-          <Route  path="/science" element={<Catagories cat="science" />}></Route>
-          <Route  path="/technology" element={<Catagories cat="technology" />}></Route>
-          <Route  path="/sports" element={<Catagories cat="sports" />}></Route>
+          <Route  path="/general" element={<Fetchnews cat="general" />}></Route>
+          <Route  path="/business" element={<Fetchnews cat="business" />}></Route>
+          <Route  path="/entertainment" element={<Fetchnews cat="entertainment" />}></Route>
+          <Route  path="/health" element={<Fetchnews cat="health" />}></Route>
+          <Route  path="/science" element={<Fetchnews cat="science" />}></Route>
+          <Route  path="/technology" element={<Fetchnews cat="technology" />}></Route>
+          <Route  path="/sports" element={<Fetchnews cat="sports" />}></Route>
           
           
           

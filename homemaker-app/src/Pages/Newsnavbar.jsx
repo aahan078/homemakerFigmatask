@@ -5,7 +5,7 @@ const Newsnavbar = () => {
   return (
     <div>
       <nav className="navbar navbar-expand-lg bg-dark newsnav" data-bs-theme="dark">
-        <div className="container">
+        <div className="container-fluid">
           <a className="navbar-brand" href="#">
             <h2>NewsApp</h2>
           </a>
