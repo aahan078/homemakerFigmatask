@@ -161,3 +161,12 @@ border-radius: 50px;
     font-weight: 700;
 font-size: 20px;
 }
+
+@media only screen and (max-width:380px){
+.pay-btn-1{
+    
+   font-size: 10px;
+ 
+    
+}
+}

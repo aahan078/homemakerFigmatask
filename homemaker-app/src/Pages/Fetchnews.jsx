@@ -26,7 +26,7 @@ const Fetchnews = ({cat}) => {
     
     
     <div className='container-fluid my-4'>
-    <div className='container-fluid  text-dark d-flex justify-content-center flex-column align-items-center' style={{height:"50vh"}} >
+    <div className='container-fluid  text-dark d-flex justify-content-center flex-column align-items-center' style={{height:"20vh"}} >
         <h2 style={{fontSize:"50px",color:"orange"}}>News Blogs App </h2>
         <h3>Website build using NewsAPI</h3>
     </div>

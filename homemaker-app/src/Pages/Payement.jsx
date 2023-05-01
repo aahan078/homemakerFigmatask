@@ -1,6 +1,7 @@
 import React , { useState } from 'react'
 // import { usePaymentInputs } from 'react-payment-inputs';
 import '../Pages/pay.css'
+import { Link } from 'react-router-dom'
 
 import sofa from '../Images/Frame.png'
 import Header from '../Header'
@@ -100,6 +101,8 @@ export default function Payement() {
 </div>
 
 <button className='pay-btn-1 mt-2'>Pay $52</button>
+<Link to='/newshome' ><button className='pay-btn-1 mt-2'>Go to our News App</button></Link>
+
 </div>
                 </div>
             </div>
