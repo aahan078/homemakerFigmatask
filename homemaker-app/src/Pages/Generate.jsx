@@ -127,6 +127,8 @@ export default function Generate() {
                 </ul>
               </div>
 
+              
+
               <p className="mt-3">Choose your room type</p>
 
               <div className="dropdown">

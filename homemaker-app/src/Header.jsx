@@ -5,6 +5,7 @@ import Navbar from "react-bootstrap/Navbar";
 import logo from '../src/Images/logo.png'
 import {useNavigate } from "react-router-dom";
 import '../src/header.css'
+import { Link } from "react-router-dom";
 
 export default function Header() {
 
@@ -16,7 +17,7 @@ navigate('/');
 
   return (
     <div className="">
-      <Navbar collapseOnSelect  expand="lg" bg="white"   variant="" className="nav">
+      <Navbar collapseOnSelect  expand="lg" bg="white" className="nav">
         <Container>
           <Navbar.Brand >
             <img className="logo-img-1" onClick={gotohome} src={logo} alt="logo"></img>
@@ -28,10 +29,11 @@ navigate('/');
            
             </Nav>
             <Nav className="btns-nav">
-              <Nav.Link href="#deets">
-                <button className="nav--btn-1">Billing</button>
+              <Nav.Link >
+                <Link to="/payement"><button className="nav--btn-1">Billing</button></Link>
+                
               </Nav.Link>
-              <Nav.Link eventKey={2} href="#memes">
+              <Nav.Link eventKey={2} >
                 <button className="btns-nav-2">Upgrade to pro</button>
               </Nav.Link>
             </Nav>
@@ -42,3 +44,4 @@ navigate('/');
     </div>
   );
 }
+

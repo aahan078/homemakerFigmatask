@@ -1,5 +1,5 @@
 import React , { useState } from 'react'
-// import { usePaymentInputs } from 'react-payment-inputs';
+
 import '../Pages/pay.css'
 import { Link } from 'react-router-dom'
 
@@ -70,14 +70,14 @@ export default function Payement() {
     </div>
  </div>
 <p className='p-txt-pay mt-2'>Email</p>
-<input className='email-input-pay' required type='email'></input>
+<input className='email-input-pay' required type='email' placeholder='Jhondoe613@gmail.com'></input>
 <p className='p-txt-pay mt-2'>Credit Card Number</p>
 <input className='email-input-pay' required type='text' placeholder='xxxx xxxx xxxx xxxx'></input>
 
 <div className='date-cvv mt-2'>
    <div className='expire-txt'>
 <p>Expiry Date</p>
-   <input type='text' placeholder='mm/yy'></input>
+   <input type='text' placeholder='mm / yy'></input>
    </div>
    <div className='expire-txt'>
 <p>CVV</p>
